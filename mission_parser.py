@@ -189,8 +189,7 @@ class MissionParser:
                 "preferred_roles": [
                     "corridor_patrol_A",
                     "corridor_patrol_B",
-                    "overwatch",
-                    "relay",
+                    "overwatch_relay",
                 ],
                 "constraints": {
                     "corridor_monitoring": True,

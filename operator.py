@@ -218,8 +218,7 @@ def fallback_mission_from_command(command):
             "preferred_roles": [
                 "corridor_patrol_A",
                 "corridor_patrol_B",
-                "overwatch",
-                "relay",
+                "overwatch_relay",
             ],
             "constraints": {
                 "corridor_monitoring": True,
@@ -240,8 +239,7 @@ def fallback_mission_from_command(command):
             "preferred_roles": [
                 "corridor_patrol_A",
                 "corridor_patrol_B",
-                "overwatch",
-                "relay",
+                "overwatch_relay",
             ],
             "constraints": {
                 "corridor_monitoring": True,

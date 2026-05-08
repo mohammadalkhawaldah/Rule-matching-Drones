@@ -105,6 +105,10 @@ sleep 30
 start_instance 3 2 14570 14670 5780 "-35.365262,149.167237,584,353"
 sleep 30
 start_instance 4 3 14580 14680 5790 "-35.366262,149.168237,584,353"
+sleep 30
+start_instance 5 4 14590 14690 5800 "-35.367262,149.169237,584,353"
+sleep 30
+start_instance 6 5 14600 14700 5810 "-35.368262,149.170237,584,353"
 
 echo "Started SITL instances:"
 printf '%s\n' "${pids[@]}"

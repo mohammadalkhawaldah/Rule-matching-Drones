@@ -109,14 +109,16 @@ class RoleEngine:
                     mission_focus="Patrol the assigned corridor segment.",
                 ),
                 RoleSpec(
-                    name="overwatch",
-                    required_capabilities=["high_altitude", "good_battery", "wide_area_observation"],
-                    mission_focus="Maintain top-level awareness and early warning.",
-                ),
-                RoleSpec(
-                    name="relay",
-                    required_capabilities=["communications_relay", "stationary_hold", "battery_reserve"],
-                    mission_focus="Extend communications coverage across the corridor.",
+                    name="overwatch_relay",
+                    required_capabilities=[
+                        "high_altitude",
+                        "good_battery",
+                        "wide_area_observation",
+                        "communications_relay",
+                        "stationary_hold",
+                        "battery_reserve",
+                    ],
+                    mission_focus="Maintain high-altitude overwatch while extending corridor communications coverage.",
                 ),
             ]
 
@@ -205,9 +207,9 @@ class RoleEngine:
             capabilities.append("visual_camera")
             capabilities.append("low_altitude_search")
         if "overwatch" in role_lower:
-            capabilities.extend(["high_altitude", "good_battery"])
+            capabilities.extend(["high_altitude", "good_battery", "wide_area_observation"])
         if "relay" in role_lower:
-            capabilities.append("communications_relay")
+            capabilities.extend(["communications_relay", "stationary_hold", "battery_reserve"])
 
         if mission_type == "facility_inspection" and "thermal" in objective:
             capabilities.append("thermal_camera")

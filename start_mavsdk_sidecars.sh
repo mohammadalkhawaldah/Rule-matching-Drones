@@ -57,6 +57,8 @@ start_sidecar 1 50040 14650
 start_sidecar 2 50041 14660
 start_sidecar 3 50042 14670
 start_sidecar 4 50043 14680
+start_sidecar 5 50044 14690
+start_sidecar 6 50045 14700
 
 echo "Started MAVSDK sidecars:"
 printf '%s\n' "${pids[@]}"

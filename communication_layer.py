@@ -33,6 +33,8 @@ CONTROL_ENDPOINTS: Dict[str, DroneControlEndpoint] = {
     "drone_2": DroneControlEndpoint("drone_2", 2, "127.0.0.1", 50041, "tcp://127.0.0.1:5770", -35.364262, 149.166237, 584.0),
     "drone_3": DroneControlEndpoint("drone_3", 3, "127.0.0.1", 50042, "tcp://127.0.0.1:5780", -35.365262, 149.167237, 584.0),
     "drone_4": DroneControlEndpoint("drone_4", 4, "127.0.0.1", 50043, "tcp://127.0.0.1:5790", -35.366262, 149.168237, 584.0),
+    "drone_5": DroneControlEndpoint("drone_5", 5, "127.0.0.1", 50044, "tcp://127.0.0.1:5800", -35.367262, 149.169237, 584.0),
+    "drone_6": DroneControlEndpoint("drone_6", 6, "127.0.0.1", 50045, "tcp://127.0.0.1:5810", -35.368262, 149.170237, 584.0),
 }
 
 

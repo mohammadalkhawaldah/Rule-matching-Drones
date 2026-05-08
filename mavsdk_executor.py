@@ -352,6 +352,12 @@ class MAVSDKExecutor:
             return
 
         role_name = str(role.get("name", "")).lower()
+        if "overwatch_relay" in role_name:
+            await self._move_to_watch_position(telemetry, north_m=20.0, east_m=20.0, altitude_delta_m=22.0)
+            await asyncio.sleep(4.0)
+            telemetry.notes.append("Combined overwatch-relay station maintained.")
+            return
+
         if "overwatch" in role_name:
             await self._move_to_watch_position(telemetry, north_m=30.0, east_m=0.0, altitude_delta_m=18.0)
             await asyncio.sleep(2.0)
@@ -623,7 +629,9 @@ class MAVSDKExecutor:
         objective = str(mission.get("objective", "")).lower()
         actions: List[str] = ["connect", "arm", "takeoff"]
 
-        if "overwatch" in role_name:
+        if "overwatch_relay" in role_name:
+            actions.append("maintain_overwatch_relay_station")
+        elif "overwatch" in role_name:
             actions.append("hold_position")
         elif "relay" in role_name:
             actions.append("maintain_high_link")
